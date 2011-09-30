@@ -1,0 +1,37 @@
+GNU General Public License, version 2 (GPL-2.0)
+<http://www.opensource.org/licenses/gpl-2.0.php>
+
+Serwer UDP(1234/4321) wyœwietlaj¹cy informacje o komputerze: 
+MEM – iloœæ pamiêci dostêpnej na serwerze (/proc/meminfo) 
+PROC – lista procesów (ps -aux) 
+DISK – zajêtoœæ dysków (df) 
+WHO – lista u¿ytkowników ( who ) 
+NETINFO – wyœwietla stan socketów 
+TCP/UDP (netstat -at)
+
+Wymagania:
+
+gcc >= 4.5.3
+make >= 3.81
+
+Kompilacja i uruchamianie:
+
+1. Pobierz https://github.com/JasiekPaw/UDP-info/archives/master do ~/<sciezka_docelowa>
+2. cd ~/<sciezka_docelowa>
+3. make all
+4. cd bin/
+5. ./main.exe
+
+Sprz¹tanie:
+
+1. cd ~/<sciezka_docelowa>
+2. make clean
+
+Program bêdzie nas³uchiwa³ datagramów UDP na porcie 1234. Po otrzymaniu znanej 
+mu komendy, zwróci wynik adresatowi na porcie 4321
+
+Program powsta³ w ramach projektu uczelnianego. Nie gwarantuje, ¿e zadzia³a 
+poprawnie.
+Gdyby zdarzy³o siê, ¿e program po¿ar³ Twoje zwierze domowe...
+Swoje ¿ale mo¿esz wylaæ na: <https://github.com/JasiekPaw/UDP-info/issues>
+ 
