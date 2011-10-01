@@ -7,7 +7,8 @@ PROC – lista procesów (ps -aux)
 DISK – zajêtoœæ dysków (df) 
 WHO – lista u¿ytkowników ( who ) 
 NETINFO – wyœwietla stan socketów 
-TCP/UDP (netstat -at)
+TCP/UDP - (netstat -at)
+STOP - zatrzymanie serwera i wys³anie informacji
 
 Wymagania:
 
@@ -28,7 +29,7 @@ Sprz¹tanie:
 2. make clean
 
 Program bêdzie nas³uchiwa³ datagramów UDP na porcie 1234. Po otrzymaniu znanej 
-mu komendy, zwróci wynik adresatowi na porcie 4321
+mu komendy, zwróci wynik adresatowi.
 
 Program powsta³ w ramach projektu uczelnianego. Nie gwarantuje, ¿e zadzia³a 
 poprawnie.
