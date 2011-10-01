@@ -16,7 +16,7 @@ make >= 3.81
 
 Kompilacja i uruchamianie:
 
-1. Pobierz https://github.com/JasiekPaw/UDP-info/archives/master do ~/<sciezka_docelowa>
+1. Pobierz https://github.com/Explicite/UDP-info/archives/master do ~/<sciezka_docelowa>
 2. cd ~/<sciezka_docelowa>
 3. make all
 4. cd bin/
@@ -33,5 +33,5 @@ mu komendy, zwróci wynik adresatowi na porcie 4321
 Program powsta³ w ramach projektu uczelnianego. Nie gwarantuje, ¿e zadzia³a 
 poprawnie.
 Gdyby zdarzy³o siê, ¿e program po¿ar³ Twoje zwierze domowe...
-Swoje ¿ale mo¿esz wylaæ na: <https://github.com/JasiekPaw/UDP-info/issues>
+Swoje ¿ale mo¿esz wylaæ na: <https://github.com/Explicite/UDP-info/issues>
  
