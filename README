@@ -21,7 +21,7 @@ Kompilacja i uruchamianie:
 2. cd ~/<sciezka_docelowa>
 3. make all
 4. cd bin/
-5. ./main.exe
+5. ./UDP-info-server.exe
 
 Sprz¹tanie:
 

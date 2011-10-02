@@ -41,6 +41,6 @@ Server::Server() {
 }
 
 Server::~Server() {
-
+	close(udpSocket);
 }
 

@@ -11,7 +11,6 @@ int main(int argc, char** argv) {
 
 	Server newServer;
 	newServer.start();
-	cout << "Connection::stop()" << endl;
 
 	return 0;
 }

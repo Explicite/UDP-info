@@ -1,13 +1,13 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-all: main.exe
+all: UDP-info-server.exe 
 	
-main.exe: binDir main.o Connection.o Server.o
-	$(CXX) $(CXXFLAGS) -o main src/main.o src/Connection.o src/Server.o -o bin/main.exe
+UDP-info-server.exe: binDir UDP-info-server.o Connection.o Server.o
+	$(CXX) $(CXXFLAGS) -o main src/UDP-info-server.o src/Connection.o src/Server.o -o bin/UDP-info-server.exe
 
-main.o: 
-	$(CXX) $(CXXFLAGS) -c src/main.cpp -o src/main.o
+UDP-info-server.o: 
+	$(CXX) $(CXXFLAGS) -c src/UDP-info-server.cpp -o src/UDP-info-server.o
 
 Connection.o:
 	$(CXX) $(CXXFLAGS) -c src/Connection.cpp -o src/Connection.o
@@ -19,7 +19,7 @@ binDir:
 	mkdir bin
 	
 clean: cleanDir
-	rm -f bin/main.exe src/Server.o src/Connection.o src/main.o
+	rm -f bin/UDP-info-server.exe src/Server.o src/Connection.o src/UDP-info-server.o
 
 cleanDir:
 	rm -r bin/

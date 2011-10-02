@@ -172,7 +172,6 @@ bool Connection::stop(){
 	sendto(udpSocket, "Connection::stop()\n", sizeof("Connection::stop()\n"), 0, (struct sockaddr *) &clientAddr,
 	       sizeof (clientAddr));
 	working = false;
-	close(udpSocket);
 	return working;
 }
 
