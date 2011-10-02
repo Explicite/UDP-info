@@ -9,7 +9,7 @@
 
 int main(int argc, char** argv) {
 
-	Server newServer;
+	Server newServer(1234);
 	newServer.start();
 
 	return 0;

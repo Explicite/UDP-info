@@ -168,8 +168,34 @@ bool Connection::start(int Socket) {
 	}
 	return working;
 }
+
+bool Connection::start(int Socket, int clientPort, char* addr, char* cmd){
+	cout << "Connection::start" << endl;
+	udpSocket = Socket;
+	if(!(sent = gethostbyname(addr))){
+	        /* ERROR */
+	        cout << "ERROR\n Server addres" << endl;
+	 }
+
+	clientAddr.sin_family = PF_INET;
+	clientAddr.sin_port = htons(clientPort);
+	bcopy(sent->h_addr, (char *) &clientAddr.sin_addr, sent->h_length);
+
+	bzero((char *) &buffer, sizeof(buffer));
+	clientSize = sizeof(clientAddr);
+
+	sendto(udpSocket, cmd, strlen(cmd), 0, (struct sockaddr *) &clientAddr,
+	           sizeof (clientAddr));
+
+	recvfrom(udpSocket, buffer, sizeof(buffer), 0, (struct sockaddr *) &clientAddr, &clientSize);
+
+	cout << buffer;
+
+	return working;
+}
+
 bool Connection::stop(){
-	sendto(udpSocket, "Connection::stop()\n", sizeof("Connection::stop()\n"), 0, (struct sockaddr *) &clientAddr,
+	sendto(udpSocket, "Server::stop()\n", sizeof("Server::stop()\n"), 0, (struct sockaddr *) &clientAddr,
 	       sizeof (clientAddr));
 	working = false;
 	return working;

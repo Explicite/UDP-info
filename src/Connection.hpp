@@ -16,9 +16,11 @@ class Connection{
 	char buffer[1280];
 	int udpSocket, clientSize;
 	struct sockaddr_in clientAddr;
+	struct hostent * sent;
 
 public:
 	bool start(int Socket);
+	bool start(int Socket, int clientPort, char* addr, char* cmd);
 	bool stop();
 	bool mem();
 	bool proc();

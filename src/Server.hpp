@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include <netdb.h>
 
 #ifndef SERVER_HPP_
 #define SERVER_HPP_
@@ -19,12 +20,14 @@ using namespace std;
 
 class Server {
 	bool working;
-    int udpSocket;
+    int udpSocket, serverPort;
     struct sockaddr_in serverAddr;
 
 public:
     bool stop();
+    bool start(int port, char* addr, char* cmd);
     bool start();
+	Server(int serverPort);
 	Server();
 	virtual ~Server();
 };

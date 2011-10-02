@@ -15,18 +15,30 @@ Wymagania:
 gcc >= 4.5.3
 make >= 3.81
 
-Kompilacja i uruchamianie:
+[1] Kompilacja i uruchamianie:
 
-1. Pobierz https://github.com/Explicite/UDP-info/archives/master do ~/<sciezka_docelowa>
-2. cd ~/<sciezka_docelowa>
-3. make all
-4. cd bin/
-5. ./UDP-info-server.exe
+	1. Pobierz https://github.com/Explicite/UDP-info/archives/master do ~/<sciezka_docelowa>
+	2. cd ~/<sciezka_docelowa>
+	3. make all
 
-Sprz¹tanie:
+	* Serwer:
 
-1. cd ~/<sciezka_docelowa>
-2. make clean
+		1. cd ~/<sciezka_docelowa>
+		2. make UDP-info-server.exe
+		3. cd bin/
+		4. ./UDP-info-server.exe
+
+	* Klient:
+
+		1. cd ~/<sciezka_docelowa>
+		2. make UDP-info-client.exe
+		3. cd bin/
+		4. ./UDP-info-client.exe <adres_serwera> <port_serwera>
+
+[2]Sprz¹tanie:
+
+	1. cd ~/<sciezka_docelowa>
+	2. make clean
 
 Program bêdzie nas³uchiwa³ datagramów UDP na porcie 1234. Po otrzymaniu znanej 
 mu komendy, zwróci wynik adresatowi.
